@@ -18,11 +18,19 @@ controller.read = (req, res)=>{
 
 controller.infoP = (req, res)=>{
     const {id}=req.params
+    //var file = new Blob
     req.getConnection((e, con)=>{
         if(e){
             res.json(e)
         }
         con.query('SELECT `clientes`.*, `estados`.`edesc`FROM `clientes` LEFT JOIN `estados` ON `clientes`.`estatus` = `estados`.`id` WHERE clientes.id= ?', [id],(e, clientes)=>{
+            data = e;
+        //data.file =  URL.createObjectURL(this.response);
+        //console.log("info")
+        //console.log(clientes[0].doc);
+        //console.log(clientes);
+        //var file = URL.createObjectURL(clientes[0].doc);
+        //console.log(file);
             if(e){
                 res.json(e)
             }
@@ -37,9 +45,13 @@ controller.alta = (req, res)=>{
     res.render('vAltaclientes')
 }
 
+controller.salir = (req, res)=>{
+    res.redirect('/')
+}
+
 controller.insert = (req, res) => {
     const cliente = req.body
-    console.log(cliente)
+    //console.log(cliente)
     req.getConnection((e,con)=>{
         if(e){
             res.json(e)

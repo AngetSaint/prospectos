@@ -7,4 +7,5 @@ router.get('/alt',pcontroller.alta);
 router.post('/insert', pcontroller.insert);
 router.get('/info/:id', pcontroller.infoP);
 router.post('/update/:id', pcontroller.update);
+router.get('/sal',pcontroller.salir);
 module.exports = router;
