@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         
-        <a href="/" class="navbar-brand"> Clientes</a>
+        <a href="/" class="navbar-brand"> Prospectos</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -61,7 +61,7 @@
                         <td><%= data.calle %></td>
                     </tr>
                     <tr>
-                        <td>Numero</td>
+                        <td>Número</td>
                         <td><%= data.num %></td>
                     </tr>
                     <tr>
@@ -69,11 +69,11 @@
                       <td><%= data.col %></td>
                     </tr>
                     <tr>
-                        <td>Codigo Postal</td>
+                        <td>Código Postal</td>
                         <td><%= data.cp %></td>
                     </tr>
                     <tr>
-                        <td>Telefono</td>
+                        <td>Teléfono</td>
                         <td><%= data.tel %></td>
                     </tr>
                     <tr>
@@ -108,7 +108,7 @@
             <div class="card-body">
               <% data.forEach((data)=> { %>
               <form id="up_form" action="/update/<%= data.id %>" method= "post">
-              <legend class="col-form-label col-sm-2 pt-0">Estado:</legend>
+              <legend class="col-form-label col-sm-8 pt-0">Evaluación del prospecto:</legend>
               <div class="form-check">
                 <input class="form-check-input" type="radio" id="est_upd" name="est_upd"  value="2" required>
                 <label class="form-check-label" for="inlineRadio1">Aceptado</label>
@@ -118,7 +118,7 @@
                 <label class="form-check-label" for="inlineRadio2">Rechazado</label>  
               </div>
               <div class = "form-group mb-3">
-                <input type="text" rows="3" id="obs" name="obs" placeholder="Observaciones de rechazo" class="form-control"></input>
+                <textarea type="text" rows="3" id="obs" name="obs" placeholder="Observaciones de rechazo" class="form-control"></textarea>
               </div>
               <button type="submit" class="btn btn-outline-dark bi bi-file-earmark-arrow-down-fill"> Guardar Estado</button>
               <% }) %>

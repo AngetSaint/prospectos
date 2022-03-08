@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         
-        <a href="/" class="navbar-brand"> Clientes</a>
+        <a href="/" class="navbar-brand"> Prospectos</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,35 +34,35 @@
           <div class="card-body">
             <form action="/insert" method= "post">
               <div class = "form-group mb-3">
-                  <input type="text" name="nom" placeholder="Nombre" class="form-control">
+                  <input type="text" name="nom" placeholder="Nombre" class="form-control" required>
               </div>
               <div class = "form-group mb-3">
-                  <input type="text" name="apellidoP" placeholder="Apellido Paterno" class="form-control">
+                  <input type="text" name="apellidoP" placeholder="Apellido Paterno" class="form-control" required>
               </div>
               <div class = "form-group mb-3">
                   <input type="text" name="apellidoS" placeholder="Apellido Materno" class="form-control">
               </div>
               <div class = "form-group mb-3">
-                  <input type="text" name="calle" placeholder="Calle" class="form-control">
+                  <input type="text" name="calle" placeholder="Calle" class="form-control" required>
               </div>
               <div class = "form-group mb-3">
-                  <input type="number" name="num" placeholder="Numero" class="form-control">
+                  <input type="number" name="num" placeholder="Número" class="form-control" required>
               </div>
               <div class = "form-group mb-3">
-                  <input type="text" name="col" placeholder="Colonia" class="form-control">
+                  <input type="text" name="col" placeholder="Colonia" class="form-control" required>
               </div>
               <div class = "form-group mb-3">
-                  <input type="number" minlength="5" maxlength="5" name="cp" placeholder="Codigo Postal" class="form-control">
+                  <input type="number" minlength="5" maxlength="5" name="cp" placeholder="Código Postal" class="form-control" required>
               </div>
               <div class = "form-group mb-3">
-                  <input id="phone" type="number" name="tel" placeholder="Telefono" class="form-control">
+                  <input id="phone" type="number" name="tel" placeholder="Teléfono" class="form-control" required>
               </div>
               <div class = "form-group mb-3">
-                  <input type="text" minlength="13" maxlength="13" name="rfc" placeholder="RFC" class="form-control">
+                  <input type="text" minlength="10" maxlength="13" name="rfc" placeholder="RFC" class="form-control" required>
               </div>
               <div class="form-group mb-3">
                   <label for="formFile" class="form-label">Documentos</label>
-                  <input class="form-control" type="file" name="doc" id="doc" multiple>
+                  <input class="form-control" type="file" name="doc" id="doc" multiple required>
               </div>
               <div>
                   <input type="text" name="estatus" value="1" class="form-control" hidden>
@@ -86,7 +86,7 @@
             <h5 class="modal-title" id="exampleModalLabel">Advertencia!</h5>
           </div>
           <div class="modal-body">
-            Al salir no se guardara la información del prospecto.
+            Al salir no se guardará la información del prospecto.
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" id="modalClose">Close</button>
